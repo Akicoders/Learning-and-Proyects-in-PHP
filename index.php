@@ -72,16 +72,34 @@ img {
     width: 120px;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
     img {
-        width: 20%;
+        width: 33%;
     }
+
+    p, h1,h2 {
+    text-align: center;
+    margin: 1.7rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+
+
+
 }
 
 @media (min-width: 1024px) {
     img {
         width: 20%;
     }
+
+
 }
 
 @media (min-width: 1280px) {
