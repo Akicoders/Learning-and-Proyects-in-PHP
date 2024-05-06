@@ -24,25 +24,77 @@ curl_close($ch);
 <html>
 <head>
     <title>LA PROXIMA PELICULA DE MARVEL </title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class=" text-white" style="background-image: url(<?= BG_URL; ?>); background-repeat: no-repeat ; background-size: cover" >
+<body >
 
-    <section class=" flex flex-col w-full h-screen justify-center items-center  ">
-    
-    <p class="text-6xl text-center mt-5 font-mono font-extrabold  italic ">La siguiente pelicula de Marvel </p>
-    <h1 class="text-5xl text-center mt-5 "><?php echo $data['title']; ?></h1>
-    <img src="<?= $data['poster_url']; ?> " alt="poster de la peli" width="200" class="mx-auto mt-5 ">
+    <section >
 
-    <p class="text-3xl text-center mt-5 lg:text-white">Se estrena el : </p>
-    <h1 class="text-2xl text-center mt-5  "><?php echo $data['release_date']; ?></h1>
-    <p class="text-xl text-center text-white mt-2"> La proxima pelicula será: <a href="<?= $data['following_production']['poster_url'] ?> " target="_blank"> <?= $data['following_production']['title']  ?> </a> </p>
+        <h1 >La siguiente pelicula de Marvel </h1>
+        <h2> <?php echo $data['title']; ?> </h2>
+        <img src="<?= $data['poster_url']; ?>" alt="poster de la peli" >
+
+        <p >Se estrena el : </p>
+        <h1 ><?php echo $data['release_date']; ?></h1>
+        <p> La proxima pelicula será: <a href="<?= $data['following_production']['poster_url'] ?>" target="_blank"> <?= $data['following_production']['title'] ?> </a> </p>
     </section>
 
 </body>
 
+<style>
+ :root {
+    color-scheme: dark;
+}
+
+    body {
+    background-image: url(<?= BG_URL; ?>);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin:0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+p, h1,h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+img {
+    margin: 1rem auto;
+    width: 120px;
+}
+
+@media (min-width: 640px) {
+    img {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    img {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1280px) {
+    img {
+        width: 15%;
+    }
+}
+
+@media (min-width: 1536px) {
+    img {
+        width: 20%;
+    }
+}
+    </style>
 
 </html>
-
